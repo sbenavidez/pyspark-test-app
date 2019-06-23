@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     spark = SparkSession\
         .builder\
-        .appName("Word Counter test environment ")\
+        .appName("Word Counter test environment")\
         .getOrCreate()
 
     lines = spark.read.text(stringToCount).rdd.map(lambda r: r[0])
